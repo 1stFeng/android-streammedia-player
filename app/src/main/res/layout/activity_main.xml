@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/cl_pre_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <EditText
+        android:id="@+id/path_choose"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="视频地址"
+        android:singleLine="true"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/cl_pre_container"
+        app:layout_constraintTop_toTopOf="@+id/cl_pre_container"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+    
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开始播放"
+        app:layout_constraintStart_toEndOf="@+id/path_choose"
+        app:layout_constraintTop_toTopOf="@+id/path_choose"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/btn_pausePlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂停"
+        app:layout_constraintStart_toEndOf="@+id/btn_start"
+        app:layout_constraintTop_toTopOf="@+id/btn_start"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/btn_grabCover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取封面"
+        app:layout_constraintStart_toEndOf="@+id/btn_pausePlay"
+        app:layout_constraintTop_toTopOf="@+id/btn_pausePlay"
+        android:layout_marginStart="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

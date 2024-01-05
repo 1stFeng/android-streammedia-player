@@ -1,0 +1,14 @@
+prefix=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64
+exec_prefix=${prefix}
+libdir=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64/lib
+includedir=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 60.16.100
+Requires: 
+Requires.private: libavcodec >= 60.31.102, libswresample >= 4.12.100, libavutil >= 58.29.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -lm -latomic -lz
+Cflags: -I${includedir}

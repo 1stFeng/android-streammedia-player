@@ -1,0 +1,14 @@
+prefix=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64
+exec_prefix=${prefix}
+libdir=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64/lib
+includedir=/home/fenghuaping/sourcecode/build/ffmpeg-6.1/android/arm64/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 58.29.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic -landroid
+Cflags: -I${includedir}
